@@ -10,4 +10,20 @@ class ViewController extends Controller
     {
         return view('top');
     }
+    public function choice()
+    {
+        return view('choice');
+    }
+    public function post()
+    {
+        return view('post');
+    }
+    public function rank()
+    {
+        return view('rank');
+    }
+    public function mypage()
+    {
+        return view('mypage');
+    }
 }

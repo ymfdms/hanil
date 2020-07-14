@@ -12,3 +12,7 @@
 */
 
 Route::get('/top', 'ViewController@top');
+Route::get('/choice', 'ViewController@choice');
+Route::get('/post', 'ViewController@post');
+Route::get('/rank', 'ViewController@rank');
+Route::get('/mypage', 'ViewController@mypage');
