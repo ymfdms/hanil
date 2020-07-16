@@ -12,3 +12,8 @@
 */
 
 Route::get('/top', 'ViewController@top');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'ViewController@logout');
