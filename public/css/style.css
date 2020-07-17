@@ -14,7 +14,7 @@ body{
 /*------------------------ヘッダー---------------------------*/
 header{
     background-color:#ffffff;
-    height:85px;
+    height:100px;
     width:100%;
 }
 
@@ -96,7 +96,7 @@ header{
     margin-right:20px;
 }
 
-/*------------------------メイン---------------------------*/
+/*------------------------topメイン---------------------------*/
 main{
     background-color:#ecf0f1;
     width:100%;
@@ -170,6 +170,185 @@ main{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+/*------------------------choiceメイン---------------------------*/
+.choice-top,.choice-bottom{
+    display:flex;
+    flex-flow:row;
+    justify-content:space-around;
+}
+
+.choice-all,.choice-wea,.choice-peo,.choice-fol{
+    height:300px;
+    width:400px;
+    margin:40px;
+    background-color:#4682B4;
+    color:white;
+    font-size:28px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/*------------------------postメイン---------------------------*/
+.post-center{
+    display:flex;
+    justify-content:center;
+    padding-top:150px;
+}
+
+.post-group{
+    display:flex;
+    flex-flow:column;
+}
+
+.post-input{
+    height:50px;
+    width:100px;
+    display:flex;
+    justify-content:center;
+}
+
+.post-group p{
+    background-color:white;
+    font-size:28px;
+}
+
+.korean-input,.japanese-input{
+    height:50px;
+    width:500px;
+    border-radius:10px 10px 10px 10px;
+    border:0px;
+    background-color:#8B0000;
+}
+
+.post-button-center{
+    display:flex;
+    justify-content:center;
+}
+
+.post-submit{
+    height:50px;
+    width:150px;
+    border-radius:10px 10px 10px 10px;
+    border:0px;
+    background-color:#8B0000;
+    margin-top:50px;
+    color:white;
+    font-size:28px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight:100;
+}
+
+/*------------------------rankメイン---------------------------*/
+.rank-center{
+    display:flex;
+    justify-content:center;   
+    padding-top:100px;
+}
+
+.rank-group{
+    display:flex;
+    flex-flow:column;
+}
+
+.rank-select,.month-select{
+    /*デフォルトのスタイルを解除*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /*三角*/
+    background-image:linear-gradient(45deg, transparent 50%, rgba(70,130,180,1) 50%),  linear-gradient(135deg, rgba(70,130,180,1) 50%, transparent 50%);
+    background-size:20px 20px, 20px 20px;
+    background-position:calc(100% - 30px) 50%, calc(100% - 10px) 50%;
+    background-repeat:no-repeat;
+    
+    width:200px;
+    height:50px;
+    font-size:20px;
+    border-radius:5px;
+    border:0px;
+}
+
+.rank-select option,.month-select option{
+    margin-left:10px;
+}
+
+.rank-title{
+    width:500px;
+    height:50px;
+    background-color:white;
+    font-size:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.rank-list-center{
+    display:flex;
+    justify-content:center;
+}
+
+.rank-list-column{
+    display:flex;
+    margin-top:50px;
+    flex-flow:column;
+}
+
+.rank-list1,.rank-list2{
+    width:700px;
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 10px;
+}
+
+.rank-list1{
+    background-color:white;
+}
+
+.rank-list2{
+    background-color:#ecf0f1;
+}
+
+.follow-submit{
+    width:100px;
+    height:40px;
+    background-color:#4682B4;
+    color:white;
+    border:0px;
+    border-radius:5px;
+}
+
+/*------------------------mypageメイン---------------------------*/
+.mypage-center{
+    display:flex;
+    justify-content:center;       
+}
+
+.mypage-column{
+    display:flex;
+    flex-flow:column;
+}
+
+.icon-circle{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    background:#8B0000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+}
+
+.profile-count-row{
+    display:flex;
+    flex-flow:row;
 }
 
 /*------------------------フッター---------------------------*/

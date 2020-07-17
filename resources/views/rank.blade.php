@@ -35,60 +35,59 @@
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <!--<li>ログアウト</li>-->
-                    <form action="/logout" method="get">
-                        <li>
-                        <input type="submit" name="regist" value="ログアウト" />
-                        </li>
-                    </form>
+                    <li>ログアウト</li>
                 </div>
             </div>
             
         </header>
         <main>
-            <div class="main-contents">
-                <div class="q">
-                    <div class="q-exp">
-                        <p>投稿から</p>
-                        <p>作成された</p>
-                        <p>問題集に</p>
-                        <p>挑戦しよう</p>
-                    </div>
-                    <div class="go-q">
-                        問題
-                    </div>
-                </div>
-                
-                <div class="p">
-                    <div class="go-p">
-                        投稿
-                    </div>
-                    <div class="p-exp">
-                        <p>ユニークな</p>
-                        <p>フレーズを</p>
-                        <p>投稿しよう</p>
+            <div class="rank-center">
+                <div class="rank-group">
+                    <div class="select-group">
+                        <select class="rank-select">
+                            <option>投稿数</option>    
+                            <option>回答数</option>
+                            <option>フォロワー数</option>    
+                        </select>
+                        <select class="month-select">
+                            <option>7月</option>    
+                            <option>6月</option>
+                            <option>5月</option>
+                        </select>
                     </div>
                 </div>
-                
-                <div class="r">
-                    <div class="r-exp">
-                        <p>他のユーザーと</p>
-                        <p>競って</p>
-                        <p>王冠を</p>
-                        <p>獲得しよう</p>
-                    </div>
-                    <div class="go-r">
-                        ランキング
-                    </div>
+            </div>
+            <div class="rank-center">
+                <div class="rank-title">
+                    7月投稿数TOP5
                 </div>
-                
-                <div class="m">
-                    <div class="go-m">
-                        マイページ
+            </div>
+            <div class="rank-list-center">
+                <div class="rank-list-column">
+                    <div class="rank-list1">
+                        <p>1</p>
+                        <p>ユーザー名</p>
+                        <input type="submit" value="フォロー" class="follow-submit">
                     </div>
-                    <div class="m-exp">
-                        <p>プロフィールを</p>
-                        <p>充実させよう</p>
+                    <div class="rank-list2">
+                        <p>2</p>
+                        <p>ユーザー名</p>
+                        <input type="submit" value="フォロー" class="follow-submit">
+                    </div>
+                    <div class="rank-list1">
+                        <p>3</p>
+                        <p>ユーザー名</p>
+                        <input type="submit" value="フォロー" class="follow-submit">
+                    </div>
+                    <div class="rank-list2">
+                        <p>4</p>
+                        <p>ユーザー名</p>
+                        <input type="submit" value="フォロー" class="follow-submit">
+                    </div>
+                    <div class="rank-list1">
+                        <p>5</p>
+                        <p>ユーザー名</p>
+                        <input type="submit" value="フォロー" class="follow-submit">
                     </div>
                 </div>
             </div>

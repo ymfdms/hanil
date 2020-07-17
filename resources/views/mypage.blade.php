@@ -35,61 +35,33 @@
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <!--<li>ログアウト</li>-->
-                    <form action="/logout" method="get">
-                        <li>
-                        <input type="submit" name="regist" value="ログアウト" />
-                        </li>
-                    </form>
+                    <li>ログアウト</li>
                 </div>
             </div>
             
         </header>
         <main>
-            <div class="main-contents">
-                <div class="q">
-                    <div class="q-exp">
-                        <p>投稿から</p>
-                        <p>作成された</p>
-                        <p>問題集に</p>
-                        <p>挑戦しよう</p>
+            <div class="mypage-center">
+                <div class="mypage-column">
+                    <div class="icon-circle">
+                        アイコン
                     </div>
-                    <div class="go-q">
-                        問題
+                    <p>@user</p>
+                    <div class="profile-count-row">
+                        <div class="profile-count">
+                            <p>投稿</p>
+                            <p>0</p>
+                        </div>
+                        <div class="profile-count">
+                            <p>フォロー</p>
+                            <p>0</p>
+                        </div>
+                        <div class="profile-count">
+                            <p>フォロワー</p>
+                            <p>0</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="p">
-                    <div class="go-p">
-                        投稿
-                    </div>
-                    <div class="p-exp">
-                        <p>ユニークな</p>
-                        <p>フレーズを</p>
-                        <p>投稿しよう</p>
-                    </div>
-                </div>
-                
-                <div class="r">
-                    <div class="r-exp">
-                        <p>他のユーザーと</p>
-                        <p>競って</p>
-                        <p>王冠を</p>
-                        <p>獲得しよう</p>
-                    </div>
-                    <div class="go-r">
-                        ランキング
-                    </div>
-                </div>
-                
-                <div class="m">
-                    <div class="go-m">
-                        マイページ
-                    </div>
-                    <div class="m-exp">
-                        <p>プロフィールを</p>
-                        <p>充実させよう</p>
-                    </div>
+                    <p>自己紹介</p>
                 </div>
             </div>
         </main>
