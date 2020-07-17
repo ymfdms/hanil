@@ -35,7 +35,12 @@
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <li>ログアウト</li>
+                    <!--<li>ログアウト</li>-->
+                    <form action="/logout" method="get">
+                        <li>
+                        <input type="submit" name="regist" value="ログアウト" />
+                        </li>
+                    </form>
                 </div>
             </div>
             
