@@ -332,6 +332,12 @@ main{
 .mypage-column{
     display:flex;
     flex-flow:column;
+    padding-top:50px;
+}
+
+.circle-center{
+    display:flex;
+    justify-content:center;
 }
 
 .icon-circle{
@@ -346,9 +352,43 @@ main{
     font-size:28px;
 }
 
+.profile-count-row-center{
+    display:flex;
+    justify-content:center;
+}
+
 .profile-count-row{
     display:flex;
     flex-flow:row;
+    width:300px;
+    justify-content:space-around;
+}
+
+.profile-count{
+    display:flex;
+    flex-flow:column;
+}
+
+.profile-count p{
+    display:flex;
+    justify-content:center;
+    padding:0;
+}
+
+.username{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+}
+
+.username p{
+    padding-left:15px;
+}
+
+.intro{
+    background:white;
+    height:300px;
+    width:400px;
 }
 
 /*------------------------フッター---------------------------*/
