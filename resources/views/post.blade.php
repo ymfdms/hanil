@@ -41,13 +41,14 @@
             
         </header>
         <main>
-            <form>
+            <form action="/store" method="POST">
+                @csrf
                 <div class="post-center">
                     <div class="post-group">
                         <p class="post-input">韓国語</p>
-                        <input type="text" id="" class="korean-input">
+                        <input type="text" id="korean" name="korean" class="korean-input">
                         <p class="post-input">日本語</p>
-                        <input type="text" id="" class="japanese-input">
+                        <input type="text" id="japanese" name="japanese" class="japanese-input">
                     </div>
                 </div>
                 <div class="post-button-center">

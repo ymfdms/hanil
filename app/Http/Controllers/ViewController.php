@@ -27,7 +27,7 @@ class ViewController extends Controller
     public function mypage()
     {
         return view('mypage');
-
+    }
     public function logout()
     {
         Auth::logout();
