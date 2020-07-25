@@ -24,3 +24,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'ViewController@logout');
 
+
+
+Route::post('/store', 'PostController@store');
