@@ -32,6 +32,5 @@ class ViewController extends Controller
     {
         Auth::logout();
         return redirect('/home');
-
     }
 }
