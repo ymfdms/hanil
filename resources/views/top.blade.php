@@ -37,9 +37,7 @@
                 <div class="header-logout">
                     <!--<li>ログアウト</li>-->
                     <form action="/logout" method="get">
-                        <li>
-                        <input type="submit" name="regist" value="ログアウト" />
-                        </li>
+                        <input type="submit" name="regist" value="ログアウト" class="btn-logout">
                     </form>
                 </div>
             </div>
