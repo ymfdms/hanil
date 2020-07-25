@@ -43,25 +43,32 @@
         <main>
             <div class="mypage-center">
                 <div class="mypage-column">
-                    <div class="icon-circle">
-                        アイコン
-                    </div>
-                    <p>@user</p>
-                    <div class="profile-count-row">
-                        <div class="profile-count">
-                            <p>投稿</p>
-                            <p>0</p>
-                        </div>
-                        <div class="profile-count">
-                            <p>フォロー</p>
-                            <p>0</p>
-                        </div>
-                        <div class="profile-count">
-                            <p>フォロワー</p>
-                            <p>0</p>
+                    <div class="circle-center">
+                        <div class="icon-circle">
+                            アイコン
                         </div>
                     </div>
-                    <p>自己紹介</p>
+                    <div class="username">
+                        <p>@user</p>
+                        <p class="profile-edit">編集</p>
+                    </div>
+                    <div class="profile-count-row-center">
+                        <div class="profile-count-row">
+                            <div class="profile-count">
+                                <p>投稿</p>
+                                <p>0</p>
+                            </div>
+                            <div class="profile-count">
+                                <p>フォロー</p>
+                                <p>0</p>
+                            </div>
+                            <div class="profile-count">
+                                <p>フォロワー</p>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="intro">自己紹介</p>
                 </div>
             </div>
         </main>
