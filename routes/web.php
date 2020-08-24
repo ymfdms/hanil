@@ -17,13 +17,14 @@ Route::get('/choice', 'ViewController@choice');
 Route::get('/post', 'ViewController@post');
 Route::get('/rank', 'ViewController@rank');
 Route::get('/mypage', 'ViewController@mypage');
-
+Route::get('/answer', 'ViewController@answer');
+Route::get('/check', 'ViewController@check');
+Route::get('/result', 'ViewController@result');
+Route::get('/correct', 'ViewController@correct');
+Route::get('/incorrect', 'ViewController@incorrect');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'ViewController@logout');
-
-
 
 Route::post('/store', 'PostController@store');

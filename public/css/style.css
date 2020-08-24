@@ -569,3 +569,126 @@ footer{
     display:flex;
     flex-flow:column;
 }
+
+/*------------------------answer-main---------------------------*/
+.q-column{
+    display:flex;
+    flex-flow:column;
+}
+.question{
+    display:flex;
+    flex-flow:row;
+    align-items: center;;
+}
+
+.q-id{
+    background:white;
+    font-size:28px;
+}
+
+.progress{
+    background:white;
+    width:500px;
+    height:20px;
+    margin-left:10px;
+}
+
+.ques-text{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:40px;
+}
+
+.ques-text li{
+    list-style-type: none;
+}
+
+.ques-center{
+    display:flex;
+    justify-content:center;
+}
+
+.answ-text1,.answ-text2,.answ-text3,.answ-text4{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:40px;
+}
+
+.answ-center{
+    display:flex;
+    justify-content:center;
+}
+
+.answer-row{
+    display:flex;
+    flex-flow:row;
+    /*justify-content:space-around;*/
+    justify-content:center;
+    padding-top:150px;
+}
+
+.align-center{
+    display:flex;
+    align-items:center;
+}
+
+.answers-column{
+    display:flex;
+    flex-flow:column;
+    margin-left:100px;
+}
+
+/*------------------------result-main---------------------------*/
+.result-row{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+}
+
+.answ-txt{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+.ques-txt{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+.resu-id-row{
+    display:flex;
+    flex-flow:row;
+}
+
+.resu-id{
+    display:flex;
+    align-items:center;
+    font-size:28px;
+    margin-right:10px;
+}
