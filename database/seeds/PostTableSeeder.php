@@ -13,8 +13,37 @@ class PostTableSeeder extends Seeder
     {
         $param=[
         	'user_id'=>1,
-        	'korean'=>'테스트',
-            'japanese'=>'テスト',
+        	'korean'=>'테스트5',
+            'japanese'=>'テスト5',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+        ];
+        DB::table('posts')->insert($param);
+        
+        $param=[
+        	'user_id'=>1,
+        	'korean'=>'테스트6',
+            'japanese'=>'テスト6',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+        ];
+        DB::table('posts')->insert($param);
+        
+        $param=[
+        	'user_id'=>1,
+        	'korean'=>'테스트7',
+            'japanese'=>'テスト7',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+        ];
+        DB::table('posts')->insert($param);
+        
+        $param=[
+        	'user_id'=>1,
+        	'korean'=>'테스트8',
+            'japanese'=>'テスト8',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
         ];
         DB::table('posts')->insert($param);
     }

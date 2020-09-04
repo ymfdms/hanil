@@ -2,7 +2,7 @@
 
 html,body{
     height:100%;
-    overflow:hidden;
+    /*overflow:hidden;*/
     font-family: 'Noto Sans JP', sans-serif;
     font-weight:100;
 }
@@ -42,7 +42,7 @@ header{
 }
 
 .header-menu li{
-    padding-left:50px;;
+    padding-left:100px;;
 }
 
 .search-area{
@@ -50,6 +50,7 @@ header{
     flex-flow:row;
     padding-left:50px;;
     align-items: center;
+    visibility:hidden;
 }
 
 .search-text{
@@ -142,11 +143,25 @@ main{
 .go-q,.go-r{
     font-size:28px;
     color:white;
+    height:100%;
+    background-color:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.top-go-q,.top-go-r{
+    font-size:28px;
+    color:white;
     height:200px;
     background-color:#4682B4;
     display:flex;
     justify-content:center;
     align-items:center;
+    width:100%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /*------------------------投稿、マイページ---------------------------*/
@@ -175,10 +190,13 @@ main{
     font-size:28px;
     color:white;
     height:200px;
+    /*height:100%;*/
     background-color:#8B0000;
     display:flex;
     justify-content:center;
     align-items:center;
+    width:100%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /*------------------------choiceメイン---------------------------*/
@@ -310,17 +328,18 @@ main{
     width:700px;
     height:50px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
     padding:0 10px;
 }
 
 .rank-list1{
     background-color:white;
+    display:flex;
 }
 
 .rank-list2{
     background-color:#ecf0f1;
+    display:flex;
 }
 
 .follow-submit{
@@ -330,6 +349,18 @@ main{
     color:white;
     border:0px;
     border-radius:5px;
+}
+
+.rank-user{
+    /*background:blue;*/
+    /*margin-right:400px;*/
+    display:flex;
+    justify-content:center;
+    
+}
+
+.rank-number{
+    text-align:left;
 }
 
 /*------------------------mypageメイン---------------------------*/
@@ -568,4 +599,167 @@ footer{
 .col-md-8-column{
     display:flex;
     flex-flow:column;
+}
+
+input.form-control{
+    color:black;
+}
+
+/*------------------------answer-main---------------------------*/
+.q-column{
+    display:flex;
+    flex-flow:column;
+}
+.question{
+    display:flex;
+    flex-flow:row;
+    align-items: center;;
+}
+
+.q-id{
+    background:white;
+    font-size:28px;
+}
+
+.progress{
+    background:white;
+    width:500px;
+    height:20px;
+    margin-left:10px;
+}
+
+.ques-text{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:40px;
+}
+
+.ques-text li{
+    list-style-type: none;
+}
+
+.ques-center{
+    display:flex;
+    justify-content:center;
+}
+
+.answ-text1,.answ-text2,.answ-text3,.answ-text4{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:40px;
+}
+
+.answ-center{
+    display:flex;
+    justify-content:center;
+}
+
+.answer-row{
+    display:flex;
+    flex-flow:row;
+    /*justify-content:space-around;*/
+    justify-content:center;
+    padding-top:150px;
+}
+
+.align-center{
+    display:flex;
+    align-items:center;
+}
+
+.answers-column{
+    display:flex;
+    flex-flow:column;
+    margin-left:100px;
+}
+
+/*------------------------result-main---------------------------*/
+.result-row{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+}
+
+.answ-txt{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+.ques-txt{
+    width:400px;
+    height:40px;
+    background:#4682B4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+.resu-id-row{
+    display:flex;
+    flex-flow:row;
+}
+
+.resu-id{
+    display:flex;
+    align-items:center;
+    font-size:28px;
+    margin-right:10px;
+}
+
+/*---------------419フラッシュメッセージ------------------*/
+
+.box {
+    transition-property: opacity; 
+    opacity: 1;
+}
+.check{
+    transition-property: opacity; 
+    opacity: 1;
+    display:none;
+}
+input:checked+.box {
+    opacity: 0;
+}
+input:checked+.check{
+    opacity:0;
+}
+.box {
+  /* Box Styling */
+  width: 50px;
+  height: 50px;
+  background: #98b900;
+}
+
+/*---------------check------------------*/
+
+.result-column{
+    display:flex;
+    flex-flow:column;
+}
+
+.result-row{
+    display:flex;
+    flex-flow:row;
 }

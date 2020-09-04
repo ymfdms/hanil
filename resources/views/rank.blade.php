@@ -16,7 +16,7 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <li><a href="{{url('/mypage')}}">マイページ</a></li>
+                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
                     <div class="search-area" id="">
                         <input type="text" id="" class="search-text">
                         <div class="search-button">
@@ -27,15 +27,17 @@
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
-                        <li>70問</li>
+                        <li>{{$answer_count}}問</li>
                     </ul>
                     <ul class="post-count">
                         <li>投稿数</li>
-                        <li>15問</li>
+                        <li>準備中</li>
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <li>ログアウト</li>
+                    <form action="/logout" method="get">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                    </form>
                 </div>
             </div>
             
@@ -43,51 +45,44 @@
         <main>
             <div class="rank-center">
                 <div class="rank-group">
+                    <label for="sel2"></label>
                     <div class="select-group">
-                        <select class="rank-select">
-                            <option>投稿数</option>    
-                            <option>回答数</option>
-                            <option>フォロワー数</option>    
-                        </select>
-                        <select class="month-select">
-                            <option>7月</option>    
-                            <option>6月</option>
-                            <option>5月</option>
-                        </select>
+                        <li><a href="{{url('/post_select')}}">投稿数</a></li>
+                        <li><a href="{{url('/answer_select')}}">回答数</a></li>
                     </div>
                 </div>
             </div>
             <div class="rank-center">
                 <div class="rank-title">
-                    7月投稿数TOP5
+                    {{$selected}}TOP5
                 </div>
             </div>
             <div class="rank-list-center">
                 <div class="rank-list-column">
                     <div class="rank-list1">
-                        <p>1</p>
-                        <p>ユーザー名</p>
-                        <input type="submit" value="フォロー" class="follow-submit">
+                        <p class="rank-number">1</p>
+                        <p class="rank-user">{{$rank_name1->name}}</p></p>
+                        <!--<input type="submit" value="フォロー" class="follow-submit">-->
                     </div>
                     <div class="rank-list2">
-                        <p>2</p>
-                        <p>ユーザー名</p>
-                        <input type="submit" value="フォロー" class="follow-submit">
+                        <p class="rank-number">2</p>
+                        <p class="rank-user">{{$rank_name2->name}}</p>
+                        <!--<input type="submit" value="フォロー" class="follow-submit">-->
                     </div>
                     <div class="rank-list1">
-                        <p>3</p>
-                        <p>ユーザー名</p>
-                        <input type="submit" value="フォロー" class="follow-submit">
+                        <p class="rank-number">3</p>
+                        <p class="rank-user">{{$rank_name3->name}}</p>
+                        <!--<input type="submit" value="フォロー" class="follow-submit">-->
                     </div>
                     <div class="rank-list2">
-                        <p>4</p>
-                        <p>ユーザー名</p>
-                        <input type="submit" value="フォロー" class="follow-submit">
+                        <p class="rank-number">4</p>
+                        <p class="rank-user">{{$rank_name4->name}}</p>
+                        <!--<input type="submit" value="フォロー" class="follow-submit">-->
                     </div>
                     <div class="rank-list1">
-                        <p>5</p>
-                        <p>ユーザー名</p>
-                        <input type="submit" value="フォロー" class="follow-submit">
+                        <p class="rank-number">5</p>
+                        <p class="rank-user">{{$rank_name5->name}}</p>
+                        <!--<input type="submit" value="フォロー" class="follow-submit">-->
                     </div>
                 </div>
             </div>
