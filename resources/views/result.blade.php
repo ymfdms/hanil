@@ -16,7 +16,7 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <li><a href="{{url('/mypage')}}">マイページ</a></li>
+                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
                     <div class="search-area" id="">
                         <input type="text" id="" class="search-text">
                         <div class="search-button">
@@ -27,15 +27,17 @@
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
-                        <li>70問</li>
+                        <li>{{$answer_count}}問</li>
                     </ul>
                     <ul class="post-count">
                         <li>投稿数</li>
-                        <li>15問</li>
+                        <li>準備中</li>
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <li>ログアウト</li>
+                    <form action="/logout" method="get">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                    </form>
                 </div>
             </div>
             

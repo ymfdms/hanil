@@ -16,7 +16,7 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <li><a href="{{url('/mypage')}}">マイページ</a></li>
+                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
                     <div class="search-area" id="">
                         <input type="text" id="" class="search-text">
                         <div class="search-button">
@@ -27,34 +27,45 @@
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
-                        <li>70問</li>
+                        <li>{{$answer_count}}問</li>
                     </ul>
                     <ul class="post-count">
                         <li>投稿数</li>
-                        <li>15問</li>
+                        <li>準備中</li>
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <li>ログアウト</li>
+                    <form action="/logout" method="get">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                    </form>
                 </div>
             </div>
             
         </header>
         <main>
+            @if (session('message'))
+                <input type="checkbox" class="check" id="flash">
+                <label for="flash" class="box">
+                    {{ session('message') }}
+                </label>
+            @endif
             <div class="choice-top">
-                <div class="choice-all">
-                    <p>全てのフレーズから</p>
-                </div>
+                <form action="/answer" class="choice-all">
+                    <input type="submit" value="全てのフレーズから" class="go-q">
+                </form>
                 <div class="choice-wea">
-                    <p>弱点克服</p>
+                    <!--<p>弱点克服</p>-->
+                    <p>準備中</p>
                 </div>
             </div>
             <div class="choice-bottom">
                 <div class="choice-peo">
-                    <p>みんなに人気</p>
+                    <!--<p>みんなに人気</p>-->
+                    <p>準備中</p>
                 </div>
                 <div class="choice-fol">
-                    <p>フォローから</p>
+                    <!--<p>フォローから</p>-->
+                    <p>準備中</p>
                 </div>
             </div>
         </main>

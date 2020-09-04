@@ -17,7 +17,7 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <li><a href="{{url('/mypage')}}">マイページ</a></li>
+                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
                     <div class="search-area" id="">
                         <input type="text" id="" class="search-text">
                         <div class="search-button">
@@ -28,27 +28,174 @@
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
-                        <li>70問</li>
+                        <li>{{$answer_count}}問</li>
                     </ul>
                     <ul class="post-count">
                         <li>投稿数</li>
-                        <li>15問</li>
+                        <li>準備中</li>
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <li>ログアウト</li>
+                    <form action="/logout" method="get">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                    </form>
                 </div>
             </div>
-            
+
         </header>
         <main>
-            <ul>
-                @foreach($session_all as $session)
-                 <li>
-                     {{$session}}
-                 </li>
-                @endforeach
-            </ul>
+            <div class="result-column">
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[0][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q1
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[0][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[0][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[1][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q2
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[1][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[1][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[2][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q3
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[2][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[2][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[3][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q4
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[3][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[3][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[4][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q5
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[4][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[4][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[5][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q6
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[5][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[5][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[6][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q7
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[6][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[6][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[7][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q8
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[7][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[7][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[8][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q9
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[8][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[8][1]}}
+                    </div>
+                </div>
+                <div class="result-row">
+                    <div><!--正誤-->
+                        {{$value[9][2]}}
+                    </div>
+                    <div><!--問題番号-->
+                        Q10
+                    </div>
+                    <div><!--日本語-->
+                        {{$value[9][0]}}
+                    </div>
+                    <div><!--韓国語-->
+                        {{$value[9][1]}}
+                    </div>
+                </div>
+                
+            </div>
+            
+            <form action="/goanswer">
+                @csrf
+                <input type="submit" value="次の10問"/>
+            </form>
+            <form action="/gotop">
+                @csrf
+                <input type="submit" value="おつかれさま"/>
+            </form>
         </main>
         <footer>
             <div class="footer-logo">
@@ -58,7 +205,6 @@
                 hanil🄫2020
             </div>
         </footer>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="{{ secure_asset('/js/haniljs.js') }}"></script>
     </body>
 </html>

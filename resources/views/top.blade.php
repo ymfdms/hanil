@@ -16,7 +16,7 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <li><a href="{{url('/mypage')}}">マイページ</a></li>
+                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
                     <div class="search-area" id="">
                         <input type="text" id="" class="search-text">
                         <div class="search-button">
@@ -27,17 +27,16 @@
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
-                        <li>70問</li>
+                        <li>{{$answer_count}}問</li>
                     </ul>
                     <ul class="post-count">
                         <li>投稿数</li>
-                        <li>15問</li>
+                        <li>準備中</li>
                     </ul>
                 </div>
                 <div class="header-logout">
-                    <!--<li>ログアウト</li>-->
                     <form action="/logout" method="get">
-                        <input type="submit" name="regist" value="ログアウト" class="btn-logout">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
                     </form>
                 </div>
             </div>
@@ -52,15 +51,15 @@
                         <p>問題集に</p>
                         <p>挑戦しよう</p>
                     </div>
-                    <div class="go-q">
-                        問題
-                    </div>
+                    <form action="/choice">
+                        <input type="submit" value="問題" class="top-go-q">
+                    </form>
                 </div>
                 
                 <div class="p">
-                    <div class="go-p">
-                        投稿
-                    </div>
+                    <form action="/post">
+                        <input type="submit" value="投稿" class="go-p">
+                    </form>
                     <div class="p-exp">
                         <p>ユニークな</p>
                         <p>フレーズを</p>
@@ -75,20 +74,20 @@
                         <p>王冠を</p>
                         <p>獲得しよう</p>
                     </div>
-                    <div class="go-r">
-                        ランキング
-                    </div>
+                    <form action="/rank">
+                        <input type="submit" value="ランキング" class="top-go-r">
+                    </form>
                 </div>
                 
-                <div class="m">
-                    <div class="go-m">
-                        マイページ
-                    </div>
-                    <div class="m-exp">
-                        <p>プロフィールを</p>
-                        <p>充実させよう</p>
-                    </div>
-                </div>
+                <!--<div class="m">-->
+                <!--    <form action="/mypage">-->
+                <!--        <input type="submit" value="マイページ" class="go-m">-->
+                <!--    </form>-->
+                <!--    <div class="m-exp">-->
+                <!--        <p>プロフィールを</p>-->
+                <!--        <p>充実させよう</p>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
         </main>
         <footer>
