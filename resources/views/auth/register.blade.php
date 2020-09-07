@@ -1,15 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="container-register">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-aside">
-                    <p>hanilのコンセプトは、</p>
-                    <p>「みんなで作る”韓日”問題集」です。</p>
-                    <p>韓国語のワンフレーズに</p>
-                    <p>訳を添えて投稿しましょう！！！</p>
+                    <p>hanilは、「みんなで作る”韓日”問題集」です。</p>
                 </div>
                 <div class="card-column">
                     <div class="card-header">新規登録</div>
@@ -82,5 +78,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

@@ -5,6 +5,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width",initial-scale=1>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <header>
@@ -16,15 +17,34 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
-                    <!--<li><a href="{{url('/mypage')}}">マイページ</a></li>-->
-                    <div class="search-area" id="">
-                        <input type="text" id="" class="search-text">
-                        <div class="search-button">
-                            <span>検索</span>
-                        </div>
-                    </div>
                 </ul>
-                <div class="header-count">
+                <div class="header-logout">
+                    <form action="/logout" method="get">
+                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                    </form>
+                </div>
+                <div id="nav-drawer">
+                  <input id="nav-input" type="checkbox" class="nav-unshown">
+                  <label id="nav-open" for="nav-input"><span></span></label>
+                  <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                  <div id="nav-content">
+                      <ul>
+                        <li><a href="{{url('/choice')}}">問題</a></li>
+                        <li><a href="{{url('/post')}}">投稿</a></li>
+                        <li><a href="{{url('/rank')}}">ランキング</a></li>
+                        <div>
+                            <form action="/logout" method="get">
+                                <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                            </form>
+                    　　</div>
+                    　</ul>
+                　</div>
+                </div>
+            </div>
+            
+        </header>
+        <main>
+            <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
                         <li>{{$answer_count}}問</li>
@@ -33,22 +53,13 @@
                         <li>投稿数</li>
                         <li>準備中</li>
                     </ul>
-                </div>
-                <div class="header-logout">
-                    <form action="/logout" method="get">
-                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
-                    </form>
-                </div>
             </div>
-            
-        </header>
-        <main>
             <div class="rank-center">
                 <div class="rank-group">
                     <label for="sel2"></label>
                     <div class="select-group">
-                        <li><a href="{{url('/post_select')}}">投稿数</a></li>
-                        <li><a href="{{url('/answer_select')}}">回答数</a></li>
+                        <li class="pos-sel"><a href="{{url('/post_select')}}">投稿数</a></li>
+                        <li class="ans-sel"><a href="{{url('/answer_select')}}">回答数</a></li>
                     </div>
                 </div>
             </div>

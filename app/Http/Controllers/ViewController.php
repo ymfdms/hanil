@@ -46,6 +46,7 @@ class ViewController extends Controller
         }
         else{
             $inout="ログイン";
+            return redirect('/home');
         }
         $result2=new Result2;
         $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
@@ -88,6 +89,7 @@ class ViewController extends Controller
         }
         else{
             $inout="ログイン"; //ログインしていなければ「ログイン」表示
+            return redirect('/home');
         }
         $postcount=Post::max('id'); //投稿のidの最大値を取得
         $data1=null; //初期化
