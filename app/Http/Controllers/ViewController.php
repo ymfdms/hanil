@@ -174,7 +174,7 @@ class ViewController extends Controller
                 // dump($value);
                 //ここまで
                 
-                return view('check',compact('result','number','answer_count','inout','value','correct_sum'));
+                return view('check',compact('result','number','answer_count','inout','value','correct_sum','correct_count'));
             }
             else{
                 $correct_count=0; //上でカウントした「正解」の要素数を格納
