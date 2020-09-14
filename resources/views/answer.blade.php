@@ -138,6 +138,6 @@
                 hanil🄫2020
             </div>
         </footer>
-    <script src="{{ asset('/js/haniljs.js') }}"></script>
+    <script src="{{ secure_asset('/js/haniljs.js') }}"></script>
     </body>
 </html>
