@@ -391,8 +391,8 @@ class ViewController extends Controller
             $inout="ログイン";
         }
         $result2=new Result2;
-        $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
-        $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
+        // $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
+        // $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
         $request->session()->flush();
         Auth::logout();
         return redirect('/home');
