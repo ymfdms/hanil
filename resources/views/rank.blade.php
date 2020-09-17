@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width",initial-scale=1>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
@@ -17,12 +17,12 @@
                     <li><a href="{{url('/choice')}}">問題</a></li>
                     <li><a href="{{url('/post')}}">投稿</a></li>
                     <li><a href="{{url('/rank')}}">ランキング</a></li>
+                    <div class="header-logout">
+                        <form action="/logout" method="get">
+                            <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                        </form>
+                    </div>
                 </ul>
-                <div class="header-logout">
-                    <form action="/logout" method="get">
-                        <input type="submit" name="regist" value={{$inout}} class="btn-logout">
-                    </form>
-                </div>
                 <div id="nav-drawer">
                   <input id="nav-input" type="checkbox" class="nav-unshown">
                   <label id="nav-open" for="nav-input"><span></span></label>
