@@ -14,8 +14,7 @@ class ViewController extends Controller
     public function top()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -29,8 +28,7 @@ class ViewController extends Controller
     public function choice()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -42,8 +40,7 @@ class ViewController extends Controller
     public function post()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -57,8 +54,7 @@ class ViewController extends Controller
     public function rank()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -71,8 +67,7 @@ class ViewController extends Controller
     public function mypage()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -88,8 +83,7 @@ class ViewController extends Controller
         $request->session()->forget(['0','1','2','3','4','5','6','7','8','9','10']);
         $request->session()->forget('pnum');
         if (Auth::check()){ //ログイン確認
-            $user=Auth::user(); //ログインユーザーの情報を取得
-            $inout=$user->name; //nameをヘッダーに表示させる用
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン"; //ログインしていなければ「ログイン」表示
@@ -125,8 +119,7 @@ class ViewController extends Controller
     
     public function correct(Request $request){ //正解したとき、この関数が動く
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -229,8 +222,7 @@ class ViewController extends Controller
     
     public function incorrect(Request $request){ //正解したとき、この関数が動く
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -324,8 +316,7 @@ class ViewController extends Controller
     
     public function goanswer(Request $request){
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -367,8 +358,7 @@ class ViewController extends Controller
     
     public function gotop(Request $request){
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
@@ -384,8 +374,7 @@ class ViewController extends Controller
     public function logout(Request $request)
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";

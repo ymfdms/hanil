@@ -377,11 +377,13 @@ p.post-input{
     /*neumo*/
     border-radius: 20px;
     background: linear-gradient(145deg, #715fca, #8671f0);
-    box-shadow:  20px 20px 40px #6a5abe,-20px -20px 40px #907aff;
+    box-shadow:  15px 15px 30px #6a5abe,-15px -15px 30px #907aff;
 }
 .purple{
     background:#7d6ae0;
     width:600px;
+    border-radius: 20px;
+    border: 3px solid white;
 }
 .purple-cen{
     display:flex;
@@ -427,7 +429,9 @@ p.post-input{
 .rank-title{
     width:500px;
     height:50px;
-    background:linear-gradient(90deg,#66b6ea,#8743ff);;
+    /* background:linear-gradient(90deg,#66b6ea,#8743ff);; */
+    border-radius: 10px;
+    border: 3px solid white;
     color:white;
     font-size:20px;
     display:flex;
@@ -450,17 +454,18 @@ p.post-input{
     width:700px;
     height:50px;
     display:flex;
+    justify-content: space-between;
     align-items:center;
     padding:0 10px;
 }
 
 .rank-list1{
     background-color:white;
-    display:flex;
+    display:flex;    
 }
 
 .rank-list2{
-    background-color:#8743ff;
+    /* background-color:#8743ff; */
     display:flex;
     color:white;
 }
@@ -501,10 +506,9 @@ p.post-input{
     display:flex;
     justify-content:center;
     align-items:center;
-    /*neumo*/
-    border-radius: 20%;
-    background: linear-gradient(145deg, #a7bee6, #c7e2ff);
-    box-shadow:  10px 10px 20px #9eb3d9,-10px -10px 20px #d6f3ff;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #715fca, #8671f0);
+    box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
 }
 .ans-sel{
     background:#66b6ea;
@@ -514,10 +518,9 @@ p.post-input{
     display:flex;
     justify-content:center;
     align-items:center;
-    /*neumo*/
-    border-radius: 20%;
-    background: linear-gradient(145deg, #a7bee6, #c7e2ff);
-    box-shadow:  10px 10px 20px #9eb3d9,-10px -10px 20px #d6f3ff;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #715fca, #8671f0);
+    box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
 }
 .ans-sel a,.pos-sel a{
     color:white;
@@ -542,7 +545,7 @@ p.post-input{
 /*------------------------register-header---------------------------*/
 .container-layout{
     /*background-color:#ffffff;*/
-    height:100px;
+    height:70px;
     width:100%;
     display:flex;
     flex-flow:row;
@@ -551,7 +554,7 @@ p.post-input{
 
 .navbar-brand{
     font-size:32px;
-    color:#343434;
+    color: white;
     margin-left:20px;
     display:flex;
     align-items:center;
@@ -560,15 +563,21 @@ p.post-input{
 .navbar-nav{
     display:flex;
     flex-flow:row;
+    margin-top:0;
 }
 
 .navbar-nav li{
     font-size:18px;
     list-style-type:none;
     margin-right:50px;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #715fca, #8671f0);
+    box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
 .nav-item a{
-    color:black;
+    color:white;
 }
 
 /*------------------------register-main---------------------------*/
@@ -581,6 +590,8 @@ p.post-input{
     justify-content:space-around;
     background:#7d6ae0;
     padding-bottom:20px;
+    border-radius: 20px;
+    border: 3px solid white;
 }
 
 .card-column{
@@ -611,16 +622,13 @@ p.post-input{
 
 .btn{
     font-size:20px;
-    /*background:#7d6ae0;*/
     color:white;
-    /*border:1px solid #4682B4;*/
-    /*border-radius:5px;*/
     width:150px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Mulish', sans-serif;
     border-style:none;
-    border-radius: 20px;
+    border-radius: 10px;
     background: linear-gradient(145deg, #715fca, #8671f0);
-    box-shadow:  15px 15px 30px #6a5abe,-15px -15px 30px #907aff;
+    box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
 
 .btn-center{
@@ -663,6 +671,7 @@ p.post-input{
     padding:10px;
     padding-top:50px;
     padding-bottom:50px;
+    border-radius: 20px;
 }
 .form-check-label{
     font-size:15px;
@@ -711,7 +720,7 @@ button.btn-login.btn-primary{
     margin-top:20px;
     border-radius: 10px;
     background: linear-gradient(145deg, #715fca, #8671f0);
-    box-shadow:  20px 20px 39px #6a5abe,-20px -20px 39px #907aff;
+    box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
 
 /*------------------------answer-main---------------------------*/
@@ -824,29 +833,7 @@ button.btn-login.btn-primary{
     border:solid 3px #ff63c3;
     align-items:center;
 }
-/* .batsu{
-  display: inline-block;
-  vertical-align: middle;
-  color: white;
-  line-height: 1;
-  width: 50px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 0.1em;
-  position: relative;
-  transform: rotate(45deg);
-} */
-/* .batsu::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  transform: rotate(90deg);
-} */
+
 .batsu{
     color:white;
     font-size:28px;
@@ -856,14 +843,12 @@ button.btn-login.btn-primary{
     width:400px;
     height:40px;
     background:#7d6ae0;
-    /* background:linear-gradient(90deg,#66b6ea,#8743ff);; */
     display:flex;
     justify-content:center;
     align-items:center;
     color:white;
     border-radius:15px;
     border: 3px solid white;
-    /*margin-top:40px;*/
 }
 .combi2{
     margin-left:20px;
@@ -874,7 +859,6 @@ button.btn-login.btn-primary{
     align-items:center;
     margin-top:10px;
     border-radius: 30px;
-    /* width:1100px; */
 }
 .batsu-center{
     display: flex;
@@ -987,21 +971,39 @@ input:checked+.check{
 }
 
 /*---------------check------------------*/
+.white-border{
+    border: 3px solid white;
+    border-radius: 20px;
+    width: 1100px;
+}
+.after-this-cent{
+    display: flex;
+    justify-content: center;
+}
 .cc-resls-column{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border-radius: 20px;
-    border: 3px solid white;
+}
+.cc{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
 }
 .resls-row{
     display: flex;
     flex-flow: row;
+    justify-content: center;
 }
 .torf,.qnum,.japa,.kore{
     display: flex;
     flex-flow: column;
     color:white;
+    margin: 20px 50px;
+}
+.torf div,.qnum div,.japa div,.kore div{
+    margin: 10px;
 }
 .go-row{
     display:flex;
@@ -1017,7 +1019,7 @@ input:checked+.check{
     width:150px;
     border-style:none;
     margin:20px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
     color:white;
@@ -1031,13 +1033,17 @@ input:checked+.check{
 
 @media screen and (max-width: 1024px) { 
     .header-menu li{
-        padding-left:50px;;
+        margin-left: 50px;
     }
-    
+    .header-logout{
+        margin-left: 50px;
+    }
     main{
         height:1226px;
     }
-    
+    .p,.r{
+        margin-left:20px;
+    }
     #nav-drawer {
         display:none;
     }
@@ -1053,7 +1059,6 @@ input:checked+.check{
     .hanil-exp{
         margin-top:20px;
     }
-    
     /*answer*/
     .answ-text1,.answ-text2,.answ-text3,.answ-text4{
         margin-top:80px;
@@ -1072,11 +1077,9 @@ input:checked+.check{
     .col-md-8{
         padding-top:100px;
     }
-    /*.py-4{*/
-    /*    height:1226px;*/
-    /*}*/
-    .card-aside p{
-        font-size:20px;
+    .card{
+        flex-flow: column;
+        width:700px;
     }
     
     /*login*/
@@ -1114,8 +1117,10 @@ input:checked+.check{
     .q2,.r2{
         display:flex;
         flex-flow:row;
-        margin-top:100px;
+        margin-top:50px;
         background:#7d6ae0;
+        border-radius: 20px;
+        border: 3px solid white;
     }
     .q-exp2,.r-exp2{
         width:400px;
@@ -1125,6 +1130,7 @@ input:checked+.check{
         align-items:center;
         background:#7d6ae0; /*紫*/
         color:white;
+        border-radius: 20px;
     }
     .top-go-q2,.top-go-r2{
         width:150px;
@@ -1147,6 +1153,8 @@ input:checked+.check{
         flex-flow:row;
         margin-top:100px;
         background:#7d6ae0;
+        border-radius: 20px;
+        border: 3px solid white;
     }
     .p-exp2{
         width:400px;
@@ -1156,6 +1164,7 @@ input:checked+.check{
         align-items:center;
         background:#7d6ae0;
         color:white;
+        border-radius: 20px;
     }
     .top-go-p2{
         width:150px;
@@ -1230,27 +1239,20 @@ input:checked+.check{
     .card{
         display:flex;
         flex-flow:column;
-        /*width:750px;*/
+        width:650px;
     }
     .container-register{
         padding-top:0;
     }
-    .col-md-8{
-        flex-flow:column;
-        /*width:750px;*/
-    }
     .py-4{
         height:800px;
     }
-    
-    /*login*/
-    /*.card{*/
-    /*    width:800px;*/
-    /*}*/
-    col-md-8{
-        width:800px;
+    .col-md-8{
         display:flex;
         justify-content:center;
+    }
+    .row.justify-content-center{
+        margin-top:100px;
     }
 }
 
@@ -1285,7 +1287,7 @@ input:checked+.check{
       height: 3px;/*線の太さ*/
       width: 25px;/*長さ*/
       border-radius: 3px;
-      background: #555;
+      background: white;
       display: block;
       content: '';
       cursor: pointer;
@@ -1320,17 +1322,17 @@ input:checked+.check{
       width: 100%;
       max-width: 375px;
       height: 200px;
-      background:linear-gradient(135deg,#F0F8FF,#bad3ff);
+      background:#7d6ae0;
       transition: .3s ease-in-out;/*滑らかに表示*/
       -webkit-transform: translateY(-200px);
       transform: translateY(-200px);
     }
     #nav-content li{
-        border-bottom:solid 1px silver;
+        border-bottom:solid 3px white;
         padding-bottom:10px;
     }
     #nav-content li a{
-        color:#ff63c3;
+        color:white;
     }
     
     #nav-input:checked ~ #nav-content {
@@ -1542,6 +1544,7 @@ input:checked+.check{
     /*login*/
     .card-header{
         width:350px;
+        font-size: 18px;
     }
     .form-group{
         width:350px;
@@ -1559,6 +1562,12 @@ input:checked+.check{
     }
     
     /*register*/
+    .navbar-nav li{
+        margin-right: 20px;
+    }
+    .nav-item a{
+        font-size: 12px;
+    }
     .card-aside p{
         font-size:16px;
     }

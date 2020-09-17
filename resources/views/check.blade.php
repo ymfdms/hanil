@@ -37,69 +37,75 @@
                         <li>{{$correct_sum}}問</li >
                     </ul>
                 </div>
-                <div class="cc-resls-column">
-                    <div class="cc">{{$correct_count}}問正解！</div>
-                    <div class="resls-row"></div>
-                        <div class="torf">
-                            <div>{{$value[0][2]}}</div> <!--正誤-->
-                            <div>{{$value[1][2]}}</div>
-                            <div>{{$value[2][2]}}</div>
-                            <div>{{$value[3][2]}}</div>
-                            <div>{{$value[4][2]}}</div>
-                            <div>{{$value[5][2]}}</div>
-                            <div>{{$value[6][2]}}</div>
-                            <div>{{$value[7][2]}}</div>
-                            <div>{{$value[8][2]}}</div>
-                            <div>{{$value[9][2]}}</div>
+                <div class="after-this-cent">
+                    <div class="white-border">
+                        <div class="after-this-cent">
+                            <div class="cc-resls-column">
+                                <div class="cc">{{$correct_count}}問正解！</div>
+                                <div class="resls-row">
+                                    <div class="torf">
+                                        <div>{{$value[0][2]}}</div> <!--正誤-->
+                                        <div>{{$value[1][2]}}</div>
+                                        <div>{{$value[2][2]}}</div>
+                                        <div>{{$value[3][2]}}</div>
+                                        <div>{{$value[4][2]}}</div>
+                                        <div>{{$value[5][2]}}</div>
+                                        <div>{{$value[6][2]}}</div>
+                                        <div>{{$value[7][2]}}</div>
+                                        <div>{{$value[8][2]}}</div>
+                                        <div>{{$value[9][2]}}</div>
+                                    </div>
+                                    <div class="qnum">
+                                        <div>Q1</div>
+                                        <div>Q2</div>
+                                        <div>Q3</div>
+                                        <div>Q4</div>
+                                        <div>Q5</div>
+                                        <div>Q6</div>
+                                        <div>Q7</div>
+                                        <div>Q8</div>
+                                        <div>Q9</div>
+                                        <div>Q10</div>
+                                    </div>
+                                    <div class="japa">
+                                        <div>{{$value[0][0]}}</div> <!--日本語-->
+                                        <div>{{$value[1][0]}}</div>
+                                        <div>{{$value[2][0]}}</div>
+                                        <div>{{$value[3][0]}}</div>
+                                        <div>{{$value[4][0]}}</div>
+                                        <div>{{$value[5][0]}}</div>
+                                        <div>{{$value[6][0]}}</div>
+                                        <div>{{$value[7][0]}}</div>
+                                        <div>{{$value[8][0]}}</div>
+                                        <div>{{$value[9][0]}}</div>
+                                    </div>
+                                    <div class="kore">
+                                        <div>{{$value[0][1]}}</div> <!--韓国語-->
+                                        <div>{{$value[1][1]}}</div>
+                                        <div>{{$value[2][1]}}</div>
+                                        <div>{{$value[3][1]}}</div>
+                                        <div>{{$value[4][1]}}</div>
+                                        <div>{{$value[5][1]}}</div>
+                                        <div>{{$value[6][1]}}</div>
+                                        <div>{{$value[7][1]}}</div>
+                                        <div>{{$value[8][1]}}</div>
+                                        <div>{{$value[9][1]}}</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="qnum">
-                            <div>Q1</div>
-                            <div>Q2</div>
-                            <div>Q3</div>
-                            <div>Q4</div>
-                            <div>Q5</div>
-                            <div>Q6</div>
-                            <div>Q7</div>
-                            <div>Q8</div>
-                            <div>Q9</div>
-                            <div>Q10</div>
+                        <div class="go-cen">
+                            <div class="go-row">
+                                <form action="/goanswer">
+                                    @csrf
+                                    <input type="submit" value="次の10問"/>
+                                </form>
+                                <form action="/gotop">
+                                    @csrf
+                                    <input type="submit" value="おつかれさま"/>
+                                </form>
+                            </div>
                         </div>
-                        <div class="japa">
-                            <div>{{$value[0][0]}}</div> <!--日本語-->
-                            <div>{{$value[1][0]}}</div>
-                            <div>{{$value[2][0]}}</div>
-                            <div>{{$value[3][0]}}</div>
-                            <div>{{$value[4][0]}}</div>
-                            <div>{{$value[5][0]}}</div>
-                            <div>{{$value[6][0]}}</div>
-                            <div>{{$value[7][0]}}</div>
-                            <div>{{$value[8][0]}}</div>
-                            <div>{{$value[9][0]}}</div>
-                        </div>
-                        <div class="kore">
-                            <div>{{$value[0][1]}}</div> <!--韓国語-->
-                            <div>{{$value[1][1]}}</div>
-                            <div>{{$value[2][1]}}</div>
-                            <div>{{$value[3][1]}}</div>
-                            <div>{{$value[4][1]}}</div>
-                            <div>{{$value[5][1]}}</div>
-                            <div>{{$value[6][1]}}</div>
-                            <div>{{$value[7][1]}}</div>
-                            <div>{{$value[8][1]}}</div>
-                            <div>{{$value[9][1]}}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="go-cen">
-                    <div class="go-row">
-                        <form action="/goanswer">
-                            @csrf
-                            <input type="submit" value="次の10問"/>
-                        </form>
-                        <form action="/gotop">
-                            @csrf
-                            <input type="submit" value="おつかれさま"/>
-                        </form>
                     </div>
                 </div>
                 <div class="push"></div>

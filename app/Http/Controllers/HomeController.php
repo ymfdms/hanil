@@ -27,8 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()){
-            $user=Auth::user();
-            $inout=$user->name;
+            $inout="ログアウト";
         }
         else{
             $inout="ログイン";
