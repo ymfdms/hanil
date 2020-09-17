@@ -958,6 +958,7 @@ button.btn-login.btn-primary{
 .res-cc{
     display: flex;
     justify-content: center;
+    color:white;
 }
 
 /*---------------419フラッシュメッセージ------------------*/
@@ -986,31 +987,21 @@ input:checked+.check{
 }
 
 /*---------------check------------------*/
-
-.result-column{
-    display:flex;
-    flex-flow:column;
-    justify-content:center;
+.cc-resls-column{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border-radius: 20px;
+    border: 3px solid white;
 }
-
-.result-row0,.result-row1{
-    display:flex;
-    flex-flow:row;
-    margin-top:20px;
-    justify-content:space-around;
-    width:500px;
-    padding:10px 0;
+.resls-row{
+    display: flex;
+    flex-flow: row;
 }
-.result-row0{
-    background:#7d6ae0;
+.torf,.qnum,.japa,.kore{
+    display: flex;
+    flex-flow: column;
     color:white;
-}
-.result-row1{
-    background:transparent;
-}
-.res-cen{
-    display:flex;
-    justify-content:center;
 }
 .go-row{
     display:flex;
@@ -1031,12 +1022,9 @@ input:checked+.check{
     box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
     color:white;
 }
-
-/*1024px以上はハンバーガー非表示*/
 #nav-drawer {
-    display:none;
+    display:none; /*1024px以上はハンバーガー非表示*/
 }
-
 .main-contents2{
     display:none;
 }
