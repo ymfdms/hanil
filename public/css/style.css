@@ -1757,7 +1757,7 @@ input:checked+.check{
     }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .answ-text1,.answ-text2,.answ-text3,.answ-text4{
         width: 220px;
     }
@@ -1771,4 +1771,4 @@ input:checked+.check{
     .answer-row{
         width: 270px;
     }
-}
+} */
