@@ -5,6 +5,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width",initial-scale=1>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+        <title>hanil ： 投稿</title>
     </head>
     <body>
         <div class="container">
@@ -71,6 +72,7 @@
                         </div>
                     </div>
                 </form>
+                <div class="push"></div>
             </main>
         </div>
         <footer>

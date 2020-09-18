@@ -662,7 +662,7 @@ p.post-input{
     padding-top:250px;
 }
 .py-4{
-    height:884px;
+    /* height:884px; */
 }
 
 /*------------------------login-main---------------------------*/
@@ -1226,7 +1226,7 @@ input:checked+.check{
     .answ-text1,.answ-text2,.answ-text3,.answ-text4{
         width:280px;
         margin:0;
-        box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
+        box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
     }
     .ques-text{
         width:280px;
@@ -1265,6 +1265,13 @@ input:checked+.check{
     .batsu-align-center{
         margin-left: 0;
     }
+    /*result*/
+    .torf,.qnum,.japa,.kore{
+        margin: 20px 0;
+    }
+    .white-border{
+        width: 620px;
+    }
     
     /*register*/
     .card{
@@ -1276,14 +1283,38 @@ input:checked+.check{
         padding-top:0;
     }
     .py-4{
-        height:800px;
+        /* height:800px; */
     }
     .col-md-8{
         display:flex;
         justify-content:center;
     }
     .row.justify-content-center{
-        margin-top:100px;
+        margin-top:50px;
+    }
+
+    /*rank*/
+    .rank-center{
+        padding-top: 20px;
+    }
+    .rank-list1,.rank-list2{
+        width: 500px;
+    }
+    .rank-list-column{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*rank*/
+    .purple-cen{
+        padding-top: 50px;
+    }
+    .post-submit{
+        height: 80px;
+        width: 150px;
+        border-radius: 10px;
+        box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
+        margin: 30px 0;
     }
 }
 
@@ -1546,7 +1577,7 @@ input:checked+.check{
         margin-top: 10px;
         height:40px;
     }
-    .resl-corr{
+    .resl-corr,.resl-inco{
         justify-content:center;
         margin-top: 10px;
     }
@@ -1581,7 +1612,19 @@ input:checked+.check{
         width:300px;
     }
     .post-center{
-        padding-top:50px;
+        padding-top:5px;
+    }
+    .post-input{
+        margin: 5px 0;
+        font-size: 24px;
+    }
+    .post-submit{
+        width: 150px;
+        height: 80px;
+        box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
+    }
+    .purple{
+        width:340px;
     }
     
     /*rank*/
@@ -1592,13 +1635,14 @@ input:checked+.check{
         width:300px;
     }
     .rank-center{
-        padding-top:50px;
-    }
-    .purple{
-        width:350px;
+        padding-top:20px;
     }
     .purple-cen{
         padding-top:20px;
+    }
+    .rank-list-column{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
     /*login*/
@@ -1619,6 +1663,9 @@ input:checked+.check{
     }
     .card{
         width:310px;
+    }
+    .form-check-input{
+        width: 20px;
     }
     
     /*register*/
@@ -1645,11 +1692,11 @@ input:checked+.check{
     }
     .form-control{
         margin-right:0;
-        width:300px;
-    }
-    .col-md-6 input{
         width:280px;
     }
+    /* .col-md-6 input{
+        width:280px;
+    } */
     .col-md-8{
         padding-top:20px;
     }
@@ -1660,7 +1707,6 @@ input:checked+.check{
         flex-flow:column;
         justify-content:center;
     }
-    
     .result-row0,.result-row1{
         display:flex;
         flex-flow:row;
@@ -1698,5 +1744,31 @@ input:checked+.check{
         background: linear-gradient(145deg, #715fca, #8671f0);
         box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
         color:white;
+    }
+    .torf,.qnum,.japa,.kore{
+        margin: 20px 0;
+    }
+    .torf div,.qnum div,.japa div,.kore div{
+        margin: 5px;
+        font-size: 12px;
+    }
+    .white-border{
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .answ-text1,.answ-text2,.answ-text3,.answ-text4{
+        width: 220px;
+    }
+    .ques-text{
+        width: 220px;
+        margin-left:5px;
+    }
+    .q-id{
+        font-size: 24px;
+    }
+    .answer-row{
+        width: 270px;
     }
 }

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width",initial-scale=1>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;700&display=swap" rel="stylesheet">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>hanil ： 回答結果</title>
     </head>
     <body>
         <div class="container">

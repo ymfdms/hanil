@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width",initial-scale=1>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>hanil ： 問題</title>
     </head>
     <body>
         <div class="container">
@@ -107,7 +108,7 @@
                     <div id="result-correct" style="display: none;" class="resl-corr">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">正解</div>
+                                <div class="batsu">マル</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>
@@ -124,7 +125,7 @@
                     <div id="result-incorrect" style="display: none;" class="resl-inco">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">不正解</div>
+                                <div class="batsu">バツ</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>

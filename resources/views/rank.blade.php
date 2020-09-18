@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width",initial-scale=1>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>hanil ： ランキング</title>
     </head>
     <body>
         <div class="container">
@@ -54,51 +55,55 @@
                             <li>{{$correct_sum}}問</li>
                         </ul>
                 </div>
-                <div class="rank-center">
-                    <div class="rank-group">
-                        <label for="sel2"></label>
-                        <div class="select-group">
-                            <li class="pos-sel"><a href="{{url('/post_select')}}">投稿数</a></li>
-                            <li class="ans-sel"><a href="{{url('/answer_select')}}">回答数</a></li>
+                <div class="after-this-cent">
+                    <div class="white-border">
+                        <div class="rank-center">
+                            <div class="rank-group">
+                                <label for="sel2"></label>
+                                <div class="select-group">
+                                    <li class="pos-sel"><a href="{{url('/post_select')}}">投稿数</a></li>
+                                    <li class="ans-sel"><a href="{{url('/answer_select')}}">回答数</a></li>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="rank-center">
-                    <div class="rank-title">
-                        {{$selected}}TOP5
-                    </div>
-                </div>
-                <div class="rank-list-center">
-                    <div class="rank-list-column">
-                        <div class="rank-list1">
-                            <p class="rank-number">1</p>
-                            <p class="rank-user">{{$rank_name1->name}}</p>
-                            <p>{{$pa_total_1}}回</p>
-                            <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                        <div class="rank-center">
+                            <div class="rank-title">
+                                {{$selected}}TOP5
+                            </div>
                         </div>
-                        <div class="rank-list2">
-                            <p class="rank-number">2</p>
-                            <p class="rank-user">{{$rank_name2->name}}</p>
-                            <p>{{$pa_total_2}}回</p>
-                            <!--<input type="submit" value="フォロー" class="follow-submit">-->
-                        </div>
-                        <div class="rank-list1">
-                            <p class="rank-number">3</p>
-                            <p class="rank-user">{{$rank_name3->name}}</p>
-                            <p>{{$pa_total_3}}回</p>
-                            <!--<input type="submit" value="フォロー" class="follow-submit">-->
-                        </div>
-                        <div class="rank-list2">
-                            <p class="rank-number">4</p>
-                            <p class="rank-user">{{$rank_name4->name}}</p>
-                            <p>{{$pa_total_4}}回</p>
-                            <!--<input type="submit" value="フォロー" class="follow-submit">-->
-                        </div>
-                        <div class="rank-list1">
-                            <p class="rank-number">5</p>
-                            <p class="rank-user">{{$rank_name5->name}}</p>
-                            <p>{{$pa_total_5}}回</p>
-                            <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                        <div class="rank-list-center">
+                            <div class="rank-list-column">
+                                <div class="rank-list1">
+                                    <p class="rank-number">1</p>
+                                    <p class="rank-user">{{$rank_name1->name}}</p>
+                                    <p>{{$pa_total_1}}回</p>
+                                    <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                                </div>
+                                <div class="rank-list2">
+                                    <p class="rank-number">2</p>
+                                    <p class="rank-user">{{$rank_name2->name}}</p>
+                                    <p>{{$pa_total_2}}回</p>
+                                    <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                                </div>
+                                <div class="rank-list1">
+                                    <p class="rank-number">3</p>
+                                    <p class="rank-user">{{$rank_name3->name}}</p>
+                                    <p>{{$pa_total_3}}回</p>
+                                    <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                                </div>
+                                <div class="rank-list2">
+                                    <p class="rank-number">4</p>
+                                    <p class="rank-user">{{$rank_name4->name}}</p>
+                                    <p>{{$pa_total_4}}回</p>
+                                    <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                                </div>
+                                <div class="rank-list1">
+                                    <p class="rank-number">5</p>
+                                    <p class="rank-user">{{$rank_name5->name}}</p>
+                                    <p>{{$pa_total_5}}回</p>
+                                    <!--<input type="submit" value="フォロー" class="follow-submit">-->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
