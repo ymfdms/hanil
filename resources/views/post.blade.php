@@ -61,7 +61,7 @@
                             <div class="post-center">
                                 <div class="post-group">
                                     <p class="post-input">韓国語</p>
-                                    <input type="text" id="korean" name="korean" class="korean-input">
+                                    <input type="text" id="korean" name="korean" class="korean-input" pattern="[가-힣]">
                                     <p class="post-input">日本語</p>
                                     <input type="text" id="japanese" name="japanese" class="japanese-input">
                                 </div>
