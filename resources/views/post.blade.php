@@ -33,11 +33,11 @@
                             <li><a href="{{url('/choice')}}">問題</a></li>
                             <li><a href="{{url('/post')}}">投稿</a></li>
                             <li><a href="{{url('/rank')}}">ランキング</a></li>
-                            <div>
+                            <li>
                                 <form action="/logout" method="get">
                                     <input type="submit" name="regist" value={{$inout}} class="btn-logout">
                                 </form>
-                        　　</div>
+　　                        </li>
                         　</ul>
                     　</div>
                     </div>
@@ -61,9 +61,9 @@
                             <div class="post-center">
                                 <div class="post-group">
                                     <p class="post-input">韓国語</p>
-                                    <input type="text" id="korean" name="korean" class="korean-input" pattern="[가-힣]">
+                                    <input type="text" id="korean" name="korean" class="korean-input" pattern="[가-힣\s　]+" type="required">
                                     <p class="post-input">日本語</p>
-                                    <input type="text" id="japanese" name="japanese" class="japanese-input">
+                                    <input type="text" id="japanese" name="japanese" class="japanese-input" pattern="[^\x20-\x7E]*" type="required">
                                 </div>
                             </div>
                             <div class="post-button-center">

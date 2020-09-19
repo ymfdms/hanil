@@ -34,11 +34,11 @@
                             <li><a href="{{url('/choice')}}">問題</a></li>
                             <li><a href="{{url('/post')}}">投稿</a></li>
                             <li><a href="{{url('/rank')}}">ランキング</a></li>
-                            <div>
+                            <li>
                                 <form action="/logout" method="get">
                                     <input type="submit" name="regist" value={{$inout}} class="btn-logout">
                                 </form>
-                        　　</div>
+　　                        </li>
                         　</ul>
                     　</div>
                     </div>

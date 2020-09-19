@@ -92,6 +92,7 @@ class ViewController extends Controller
         $postcount=Post::max('id'); //投稿のidの最大値を取得
         $data1=null; //初期化
         while($data1==null){
+            // $data1 = Post::where('id',mt_rand(1,$postcount))->first();
             $data1 = Post::where('id',mt_rand(1,$postcount))->first();
         }
         $data2=null; //初期化

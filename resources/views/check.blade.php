@@ -25,6 +25,23 @@
                             </form>
                         </div>
                     </ul>
+                    <div id="nav-drawer">
+                      <input id="nav-input" type="checkbox" class="nav-unshown">
+                      <label id="nav-open" for="nav-input"><span></span></label>
+                      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                      <div id="nav-content">
+                          <ul>
+                            <li><a href="{{url('/choice')}}">問題</a></li>
+                            <li><a href="{{url('/post')}}">投稿</a></li>
+                            <li><a href="{{url('/rank')}}">ランキング</a></li>
+                            <li>
+                                <form action="/logout" method="get">
+                                    <input type="submit" name="regist" value={{$inout}} class="btn-logout">
+                                </form>
+　　                        </li>
+                        　</ul>
+                    　</div>
+                    </div>
                 </div>
             </header>
             <main>

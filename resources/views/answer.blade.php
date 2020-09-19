@@ -34,11 +34,11 @@
                             <li><a href="{{url('/choice')}}">問題</a></li>
                             <li><a href="{{url('/post')}}">投稿</a></li>
                             <li><a href="{{url('/rank')}}">ランキング</a></li>
-                            <div>
+                            <li>
                                 <form action="/logout" method="get">
                                     <input type="submit" name="regist" value={{$inout}} class="btn-logout">
                                 </form>
-                        　　</div>
+　　                        </li>
                         　</ul>
                     　</div>
                     </div>
@@ -108,7 +108,7 @@
                     <div id="result-correct" style="display: none;" class="resl-corr">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">マル</div>
+                                <div class="batsu">正解</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>
@@ -125,7 +125,7 @@
                     <div id="result-incorrect" style="display: none;" class="resl-inco">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">バツ</div>
+                                <div class="batsu">不正解</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>
