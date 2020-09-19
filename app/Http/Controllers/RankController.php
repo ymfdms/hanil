@@ -34,7 +34,7 @@ class RankController extends Controller
         // dump($count_result);
         $collection = collect($count_result);
         $sorted_posted=$collection->sort()->all(); //昇順でソート
-        // dump($sorted_posted);
+        dump($sorted_posted);
         $reversed=array_reverse($sorted_posted); //ソートを逆転
         // dump($reversed);
         
