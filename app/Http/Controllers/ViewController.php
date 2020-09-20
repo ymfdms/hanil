@@ -97,15 +97,15 @@ class ViewController extends Controller
         }
         $data2=null; //初期化
         while($data2==null){
-            $data2=Post::wherenotin('id',$data1)->where('id',mt_rand(1,$postcount))->first();
+            $data2=Post::wherenotin('korean',$data1)->wherenotin('japanese',$data1)->where('id',mt_rand(1,$postcount))->first();
         }
         $data3=null; //初期化
         while($data3==null){
-            $data3=Post::wherenotin('id',$data1)->wherenotin('id',$data2)->where('id',mt_rand(1,$postcount))->first();
+            $data3=Post::wherenotin('korean',$data1)->wherenotin('japanese',$data1)->wherenotin('korean',$data2)->wherenotin('japanese',$data2)->where('id',mt_rand(1,$postcount))->first();
         }
         $data4=null; //初期化
         while($data4==null){
-            $data4=Post::wherenotin('id',$data1)->wherenotin('id',$data2)->wherenotin('id',$data3)->where('id',mt_rand(1,$postcount))->first();
+            $data4=Post::wherenotin('korean',$data1)->wherenotin('japanese',$data1)->wherenotin('korean',$data2)->wherenotin('japanese',$data2)->wherenotin('korean',$data3)->wherenotin('japanese',$data3)->where('id',mt_rand(1,$postcount))->first();
         }
         $data_array=[$data1,$data2,$data3,$data4]; //data_qを得るため、data1-data4を配列化
         $data_key=array_rand($data_array); //data1-data4からランダムにkeyを取得

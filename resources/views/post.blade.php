@@ -61,9 +61,9 @@
                             <div class="post-center">
                                 <div class="post-group">
                                     <p class="post-input">韓国語</p>
-                                    <input type="text" id="korean" name="korean" class="korean-input" pattern="[가-힣\s　]+" type="required">
+                                    <input type="text" id="korean" name="korean" class="korean-input" pattern="[가-힣　]+" title="ハングルと全角スペースのみで入力してください" required>
                                     <p class="post-input">日本語</p>
-                                    <input type="text" id="japanese" name="japanese" class="japanese-input" pattern="[^\x20-\x7E]*" type="required">
+                                    <input type="text" id="japanese" name="japanese" class="japanese-input" pattern="[亜-熙ぁ-んァ-ヶ　]+" title="ひらがな、カタカナ、漢字と全角スペースのみで入力してください" required>
                                 </div>
                             </div>
                             <div class="post-button-center">
