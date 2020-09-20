@@ -13,6 +13,7 @@
 
 Route::get('/top', 'ViewController@top');
 Route::get('/', 'ViewController@logout');
+Route::get('/speech', 'ViewController@speech');
 
 Route::get('/choice', 'ViewController@answer');
 Route::get('/post', 'ViewController@post');

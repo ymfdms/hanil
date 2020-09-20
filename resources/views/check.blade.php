@@ -98,16 +98,16 @@
                                         <div>{{$value[9][0]}}</div>
                                     </div>
                                     <div class="kore">
-                                        <div>{{$value[0][1]}}</div> <!--韓国語-->
-                                        <div>{{$value[1][1]}}</div>
-                                        <div>{{$value[2][1]}}</div>
-                                        <div>{{$value[3][1]}}</div>
-                                        <div>{{$value[4][1]}}</div>
-                                        <div>{{$value[5][1]}}</div>
-                                        <div>{{$value[6][1]}}</div>
-                                        <div>{{$value[7][1]}}</div>
-                                        <div>{{$value[8][1]}}</div>
-                                        <div>{{$value[9][1]}}</div>
+                                        <div><input type="button" id="text1" value={{$value[0][1]}}></div>
+                                        <div><input type="button" id="text2" value={{$value[1][1]}}></div>
+                                        <div><input type="button" id="text3" value={{$value[2][1]}}></div>
+                                        <div><input type="button" id="text4" value={{$value[3][1]}}></div>
+                                        <div><input type="button" id="text5" value={{$value[4][1]}}></div>
+                                        <div><input type="button" id="text6" value={{$value[5][1]}}></div>
+                                        <div><input type="button" id="text7" value={{$value[6][1]}}></div>
+                                        <div><input type="button" id="text8" value={{$value[7][1]}}></div>
+                                        <div><input type="button" id="text9" value={{$value[8][1]}}></div>
+                                        <div><input type="button" id="text10" value={{$value[9][1]}}></div>
                                     </div>
                                 </div>
                             </div>
@@ -137,6 +137,6 @@
                 hanil🄫2020
             </div>
         </footer>
-    <script src="{{ asset('/js/haniljs.js') }}"></script>
+    <script src="{{ asset('/js/speech.js') }}"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 let answer =null;
 let question = null;
+let check = null;
 
 document.getElementById("a1").onclick = function() {
     
@@ -9,6 +10,7 @@ document.getElementById("a1").onclick = function() {
     document.getElementById("a4").disabled = true;
     
     answer = document.choice1.a1.value;
+    check =document.choice1.ans.value;
     if(answer==null){
         alert("nullが含まれています");
     }
@@ -28,6 +30,7 @@ document.getElementById("a2").onclick = function() {
     document.getElementById("a4").disabled = true;
     
     answer = document.choice1.a2.value;
+    check =document.choice1.ans.value;
     if(answer==null){
         alert("nullが含まれています");
     }
@@ -47,6 +50,7 @@ document.getElementById("a3").onclick = function() {
     document.getElementById("a4").disabled = true;
     
     answer = document.choice1.a3.value;
+    check =document.choice1.ans.value;
     if(answer==null){
         alert("nullが含まれています");
     }
@@ -66,6 +70,7 @@ document.getElementById("a4").onclick = function() {
     document.getElementById("a4").disabled = true;
     
     answer = document.choice1.a4.value;
+    check =document.choice1.ans.value;
     if(answer==null){
         alert("nullが含まれています");
     }
@@ -83,7 +88,7 @@ document.getElementById("result-correct").onclick = function() {
     // データを設定
     ele.setAttribute('type', 'hidden');
     ele.setAttribute('name', 'answer2');
-    ele.setAttribute('value', answer);
+    ele.setAttribute('value', check);
     
     var f = document.getElementById("correct_myform");
     f.appendChild(ele);
@@ -97,7 +102,7 @@ document.getElementById("result-incorrect").onclick = function() {
     // データを設定
     ele.setAttribute('type', 'hidden');
     ele.setAttribute('name', 'answer2');
-    ele.setAttribute('value', answer);
+    ele.setAttribute('value', check);
     
     var f = document.getElementById("incorrect_myform");
     f.appendChild(ele);

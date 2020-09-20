@@ -119,6 +119,8 @@ class ViewController extends Controller
     }
     
     public function correct(Request $request){ //正解したとき、この関数が動く
+        // $request->session()->forget(['0','1','2','3','4','5','6','7','8','9','10']);
+        // $request->session()->forget('pnum');
         if (Auth::check()){
             $inout="ログアウト";
         }
@@ -240,6 +242,7 @@ class ViewController extends Controller
         $result2=new Result2;
         $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
         $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
+
         $answered = AnswerRequest::input('answer2'); //クリックした選択肢の値を取得
         // dump($answered);
         $questioned=Post::where('korean',$answered)->value('japanese');
@@ -387,6 +390,20 @@ class ViewController extends Controller
         $request->session()->flush();
         Auth::logout();
         return redirect('/home');
+    }
+
+    public function speech(){
+        if (Auth::check()){
+            $inout="ログアウト";
+        }
+        else{
+            $inout="ログイン";
+            return redirect('/home');
+        }
+        $result2=new Result2;
+        $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
+        $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
+        return view('speechtest',compact('answer_count','inout','correct_sum'));
     }
 }
 
