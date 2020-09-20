@@ -23,54 +23,62 @@ class RankController extends Controller
         $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
         $selected="投稿数";
         $post_id=\DB::table('users')->pluck('id'); //すべてのuser_idを取得
-        // dump($post_id);
-        for($count_id=1; $count_id<count($post_id)+1; $count_id++){
+        // dd($post_id);
+        for($count_id_key=0; $count_id_key<count($post_id); $count_id_key++){
+            $count_id=$post_id[$count_id_key];
+            // dd($count_id);
             $count=Post::where('user_id',$count_id)->count(); //user_idをカウント
+            // dd($count);
             // dump($count);
-            $count_result[]=$count; //これを並べ替えればランキングになる
+            // $count_result[]=$count;
+            $count_result_key[]=$count_id;
+            $count_result_value[]=$count; 
+            // $count_result=array($count_id=>$count);
             // $count_result[]->push($count_id,$count);
             // $count_result=array($count_id=>$count);
         }
+        $count_result=array_combine($count_result_key,$count_result_value);
         // dump($count_result);
         $collection = collect($count_result);
+        // dump($collection);
         $sorted_posted=$collection->sort()->all(); //昇順でソート
-        dump($sorted_posted);
+        // dump($sorted_posted);
         $reversed=array_reverse($sorted_posted); //ソートを逆転
         // dump($reversed);
         
         //最後から何番目が$rank1みたいな
         $rank1=array_slice($sorted_posted,-1,1);
         // dump($rank1);
-        $rank1_no=key(array_slice($sorted_posted, -1, 1, true))+1;
-        // dump($rank1_no);  //この値がuser_id
+        $rank1_no=key(array_slice($sorted_posted, -1, 1, true));
+        // dump($rank1_no); 
         $rank_name1=\DB::table('users')->where('id',$rank1_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name1);
         $pa_total_1=Post::where('user_id',$rank1_no)->count(); //投稿数
         
         $rank2=array_slice($sorted_posted,-2,1);
         // dump($rank2);
-        $rank2_no=key(array_slice($sorted_posted, -2, 1, true))+1;
+        $rank2_no=key(array_slice($sorted_posted, -2, 1, true));
         // dump($rank2_no);
         $rank_name2=\DB::table('users')->where('id',$rank2_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_2=Post::where('user_id',$rank2_no)->count(); //投稿数
         
         $rank3=array_slice($sorted_posted,-3,1);
         // dump($rank3);
-        $rank3_no=key(array_slice($sorted_posted, -3, 1, true))+1;
+        $rank3_no=key(array_slice($sorted_posted, -3, 1, true));
         // dump($rank3_no);
         $rank_name3=\DB::table('users')->where('id',$rank3_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_3=Post::where('user_id',$rank3_no)->count(); //投稿数
         
         $rank4=array_slice($sorted_posted,-4,1);
         // dump($rank3);
-        $rank4_no=key(array_slice($sorted_posted, -4, 1, true))+1;
+        $rank4_no=key(array_slice($sorted_posted, -4, 1, true));
         // dump($rank4_no);
         $rank_name4=\DB::table('users')->where('id',$rank4_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_4=Post::where('user_id',$rank4_no)->count(); //投稿数
         
         $rank5=array_slice($sorted_posted,-5,1);
         // dump($rank5);
-        $rank5_no=key(array_slice($sorted_posted, -5, 1, true))+1;
+        $rank5_no=key(array_slice($sorted_posted, -5, 1, true));
         // dump($rank5_no);
         $rank_name5=\DB::table('users')->where('id',$rank5_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_5=Post::where('user_id',$rank5_no)->count(); //投稿数
@@ -90,17 +98,24 @@ class RankController extends Controller
         $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
         $selected="投稿数";
         $post_id=\DB::table('users')->pluck('id'); //すべてのuser_idを取得
-        // dump($post_id);
-        
-        for($count_id=1; $count_id<count($post_id)+1; $count_id++){
+        // dd($post_id);
+        for($count_id_key=0; $count_id_key<count($post_id); $count_id_key++){
+            $count_id=$post_id[$count_id_key];
+            // dd($count_id);
             $count=Post::where('user_id',$count_id)->count(); //user_idをカウント
+            // dd($count);
             // dump($count);
-            $count_result[]=$count; //これを並べ替えればランキングになる
+            // $count_result[]=$count;
+            $count_result_key[]=$count_id;
+            $count_result_value[]=$count; 
+            // $count_result=array($count_id=>$count);
             // $count_result[]->push($count_id,$count);
             // $count_result=array($count_id=>$count);
         }
+        $count_result=array_combine($count_result_key,$count_result_value);
         // dump($count_result);
         $collection = collect($count_result);
+        // dump($collection);
         $sorted_posted=$collection->sort()->all(); //昇順でソート
         // dump($sorted_posted);
         $reversed=array_reverse($sorted_posted); //ソートを逆転
@@ -109,36 +124,36 @@ class RankController extends Controller
         //最後から何番目が$rank1みたいな
         $rank1=array_slice($sorted_posted,-1,1);
         // dump($rank1);
-        $rank1_no=key(array_slice($sorted_posted, -1, 1, true))+1;
-        // dump($rank1_no);  //この値がuser_id
+        $rank1_no=key(array_slice($sorted_posted, -1, 1, true));
+        // dump($rank1_no); 
         $rank_name1=\DB::table('users')->where('id',$rank1_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name1);
         $pa_total_1=Post::where('user_id',$rank1_no)->count(); //投稿数
         
         $rank2=array_slice($sorted_posted,-2,1);
         // dump($rank2);
-        $rank2_no=key(array_slice($sorted_posted, -2, 1, true))+1;
+        $rank2_no=key(array_slice($sorted_posted, -2, 1, true));
         // dump($rank2_no);
         $rank_name2=\DB::table('users')->where('id',$rank2_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_2=Post::where('user_id',$rank2_no)->count(); //投稿数
         
         $rank3=array_slice($sorted_posted,-3,1);
         // dump($rank3);
-        $rank3_no=key(array_slice($sorted_posted, -3, 1, true))+1;
+        $rank3_no=key(array_slice($sorted_posted, -3, 1, true));
         // dump($rank3_no);
         $rank_name3=\DB::table('users')->where('id',$rank3_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_3=Post::where('user_id',$rank3_no)->count(); //投稿数
         
         $rank4=array_slice($sorted_posted,-4,1);
         // dump($rank3);
-        $rank4_no=key(array_slice($sorted_posted, -4, 1, true))+1;
+        $rank4_no=key(array_slice($sorted_posted, -4, 1, true));
         // dump($rank4_no);
         $rank_name4=\DB::table('users')->where('id',$rank4_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_4=Post::where('user_id',$rank4_no)->count(); //投稿数
         
         $rank5=array_slice($sorted_posted,-5,1);
         // dump($rank5);
-        $rank5_no=key(array_slice($sorted_posted, -5, 1, true))+1;
+        $rank5_no=key(array_slice($sorted_posted, -5, 1, true));
         // dump($rank5_no);
         $rank_name5=\DB::table('users')->where('id',$rank5_no)->first(); //$rank1_noでusersテーブルのレコード検索
         $pa_total_5=Post::where('user_id',$rank5_no)->count(); //投稿数
@@ -161,13 +176,16 @@ class RankController extends Controller
         $answer_id=\DB::table('users')->pluck('id'); //すべてのuser_idを取得
         // dump($post_id);
         
-        for($count_id=1; $count_id<count($answer_id)+1; $count_id++){
+        for($count_id_key=0; $count_id_key<count($answer_id); $count_id_key++){
+            $count_id=$answer_id[$count_id_key];
             $count=Result2::where('user_id',$count_id)->count(); //user_idをカウント
             // dump($count);
-            $count_result[]=$count; //これを並べ替えればランキングになる
+            $count_result_key[]=$count_id; //これを並べ替えればランキングになる
+            $count_result_value[]=$count;
             // $count_result[]->push($count_id,$count);
             // $count_result=array($count_id=>$count);
         }
+        $count_result=array_combine($count_result_key,$count_result_value);
         // dump($count_result);
         $collection = collect($count_result);
         $sorted_answered=$collection->sort()->all(); //昇順でソート
@@ -178,7 +196,7 @@ class RankController extends Controller
         //最後から何番目が$rank1みたいな
         $rank1=array_slice($sorted_answered,-1,1);
         // dump($rank1);
-        $rank1_no=key(array_slice($sorted_answered, -1, 1, true))+1;
+        $rank1_no=key(array_slice($sorted_answered, -1, 1, true));
         // dump($rank1_no);  //この値がuser_id
         $rank_name1=\DB::table('users')->where('id',$rank1_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name1);
@@ -186,7 +204,7 @@ class RankController extends Controller
         
         $rank2=array_slice($sorted_answered,-2,1);
         // dump($rank2);
-        $rank2_no=key(array_slice($sorted_answered, -2, 1, true))+1;
+        $rank2_no=key(array_slice($sorted_answered, -2, 1, true));
         // dump($rank2_no);  //この値がuser_id
         $rank_name2=\DB::table('users')->where('id',$rank2_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name2);
@@ -194,7 +212,7 @@ class RankController extends Controller
         
         $rank3=array_slice($sorted_answered,-3,1);
         // dump($rank3);
-        $rank3_no=key(array_slice($sorted_answered, -3, 1, true))+1;
+        $rank3_no=key(array_slice($sorted_answered, -3, 1, true));
         // dump($rank3_no);  //この値がuser_id
         $rank_name3=\DB::table('users')->where('id',$rank3_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name3);
@@ -202,7 +220,7 @@ class RankController extends Controller
         
         $rank4=array_slice($sorted_answered,-4,1);
         // dump($rank4);
-        $rank4_no=key(array_slice($sorted_answered, -4, 1, true))+1;
+        $rank4_no=key(array_slice($sorted_answered, -4, 1, true));
         // dump($rank4_no);  //この値がuser_id
         $rank_name4=\DB::table('users')->where('id',$rank4_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name4);
@@ -210,7 +228,7 @@ class RankController extends Controller
         
         $rank5=array_slice($sorted_answered,-5,1);
         // dump($rank5);
-        $rank5_no=key(array_slice($sorted_answered, -5, 1, true))+1;
+        $rank5_no=key(array_slice($sorted_answered, -5, 1, true));
         // dump($rank5_no);  //この値がuser_id
         $rank_name5=\DB::table('users')->where('id',$rank5_no)->first(); //$rank1_noでusersテーブルのレコード検索
         // dump($rank_name5);

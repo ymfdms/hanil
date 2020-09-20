@@ -127,6 +127,9 @@ input:focus{
     box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
     align-items: center; 
 }
+.header-logout form{
+    margin-bottom: 0;
+}
 .header-menu a{
     color:white;
 }
