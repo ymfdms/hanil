@@ -144,7 +144,7 @@ class ViewController extends Controller
         // dump($questioned);
         $request->session()->push($pnum,$questioned);
         $request->session()->push($pnum,$answered);
-        $request->session()->push($pnum,'正解');
+        $request->session()->push($pnum,'○');
         $number=$pnum+1; //現在何問目か
         if($number>10){
             $result=$request->session()->all();
@@ -153,8 +153,8 @@ class ViewController extends Controller
             // dd($flattened);
             $flattened_count=array_count_values($flattened); //各要素数をカウント
             // dump($flattened_count);
-            if(!array_search('正解',$flattened)==false){
-                $correct_count=$flattened_count["正解"]; //上でカウントした「正解」の要素数を格納
+            if(!array_search('○',$flattened)==false){
+                $correct_count=$flattened_count["○"]; //上でカウントした「正解」の要素数を格納
                 $correct_rate=$correct_count/10; 
                 $user=Auth::user(); //ここからDBへ格納
                 $id=Auth::id();
@@ -249,7 +249,7 @@ class ViewController extends Controller
         // dump($questioned);
         $request->session()->push($pnum,$questioned);
         $request->session()->push($pnum,$answered);
-        $request->session()->push($pnum,'不正解');
+        $request->session()->push($pnum,'×');
         $number=$pnum+1; //現在何問目か
         if($number>10){
             $result=$request->session()->all();
@@ -258,8 +258,8 @@ class ViewController extends Controller
             // dd($flattened);
             $flattened_count=array_count_values($flattened); //各要素数をカウント
             // dump($flattened_count);
-            if(!array_search('正解',$flattened)==false){
-                $correct_count=$flattened_count["正解"]; //上でカウントした「正解」の要素数を格納
+            if(!array_search('○',$flattened)==false){
+                $correct_count=$flattened_count["○"]; //上でカウントした「正解」の要素数を格納
                 $correct_rate=$correct_count/10; 
                 $user=Auth::user(); //ここからDBへ格納
                 $id=Auth::id();

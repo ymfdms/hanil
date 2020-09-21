@@ -108,7 +108,7 @@
                     <div id="result-correct" style="display: none;" class="resl-corr">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">正解</div>
+                                <div class="batsu">○</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>
@@ -125,7 +125,7 @@
                     <div id="result-incorrect" style="display: none;" class="resl-inco">
                         <div class="combi-center">
                             <div class="batsu-align-center">
-                                <div class="batsu">不正解</div>
+                                <div class="batsu">×</div>
                                 <div class="combi-row">
                                     <div class="combi1">{{$data_q->japanese}}</div>
                                     <div class="combi2">{{$data_q->korean}}</div>
