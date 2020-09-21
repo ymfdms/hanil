@@ -1086,10 +1086,6 @@ input:checked+.check{
     .header-logout{
         margin-left: 50px;
     }
-    main{
-        /* height:1226px; */
-        /* height:100%; */
-    }
     .q,.p,.r{
         height: 540px;
     }
@@ -1165,9 +1161,6 @@ input:checked+.check{
 }
 
 @media screen and (max-width: 896px) { 
-    main{
-        /* height:800px; */
-    }
     #nav-drawer {
         display:none;
     }
@@ -1322,7 +1315,6 @@ input:checked+.check{
         margin-left: 0;
         padding-top:40px;
         padding-left: 30px;
-        /*padding-bottom:20px;*/
         border-radius: 50px;
     }
     .combi-form{
@@ -1355,9 +1347,6 @@ input:checked+.check{
     }
     .container-register{
         padding-top:0;
-    }
-    .py-4{
-        /* height:800px; */
     }
     .col-md-8{
         display:flex;
