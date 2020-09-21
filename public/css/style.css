@@ -72,7 +72,12 @@ input:focus{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
-
+.header-menu li:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}
+.header-logout:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}
 .header-count{
     display:flex;
     flex-flow:row;
@@ -226,8 +231,8 @@ input:focus{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  20px 20px 40px #6a5abe,-20px -20px 40px #907aff;
 }
-.top-go-q:hover{
-    background: linear-gradient(145deg, #8671f0 #715fca);
+.top-go-q:hover,.top-go-r:hover{
+    background: linear-gradient(145deg, #8671f0, #715fca);
     /* box-shadow:  20px 20px 40px #907aff,-20px -20px 40px #6a5abe; */
 }
 .go-cen{
@@ -281,6 +286,9 @@ input:focus{
     border-radius: 44px;
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  22px 22px 44px #6a5abe,-22px -22px 44px #907aff;
+}
+.go-p:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
 }
 
 /*------------------------choiceメイン---------------------------*/
@@ -383,6 +391,9 @@ p.post-input{
     border-radius: 20px;
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  15px 15px 30px #6a5abe,-15px -15px 30px #907aff;
+}
+.post-submit:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
 }
 .purple{
     background:#7d6ae0;
@@ -528,6 +539,9 @@ p.post-input{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
 }
+.pos-sel:hover,.ans-sel:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );   
+}
 .ans-sel a,.pos-sel a{
     color:white;
 }
@@ -636,7 +650,9 @@ p.post-input{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
-
+.btn:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}
 .btn-center{
     display:flex;
     justify-content:center;
@@ -698,7 +714,7 @@ p.post-input{
     color:white;
     border:1px solid #4682B4;
     border-radius:5px;
-    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
     margin-top:10px;
 }
 
@@ -725,10 +741,13 @@ button.btn-login.btn-primary{
     background:#7d6ae0;
     margin-top:20px;
     border-radius: 10px;
+    border-style: none;
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
-
+button.btn-login.btn-primary:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}
 /*------------------------answer-main---------------------------*/
 .answer-block{
     display: flex;
@@ -804,7 +823,9 @@ button.btn-login.btn-primary{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
 }
-
+.answ-text1:hover,.answ-text2:hover,.answ-text3:hover,.answ-text4:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}    
 .answ-center{
     display:flex;
     justify-content:center;
@@ -901,7 +922,9 @@ button.btn-login.btn-primary{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
 }
-
+.combi-form input:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
+}
 /*------------------------result-main---------------------------*/
 .result-row{
     display:flex;
@@ -1010,8 +1033,22 @@ input:checked+.check{
 }
 .torf div,.qnum div,.japa div,.kore div{
     margin: 10px;
-    /* font-size: 24px; */
+    /* padding: 3px; */
     height: 36px;
+}
+.kore div{
+    width: 200px;
+}
+.kore div input{
+    width: 100%;
+    color:white;
+    border-style: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #715fca, #8671f0);
+    box-shadow:  5px 5px 10px #6a5abe,-5px -5px 10px #907aff;
+}
+.kore div input:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
 }
 .go-row{
     display:flex;
@@ -1031,6 +1068,9 @@ input:checked+.check{
     background: linear-gradient(145deg, #715fca, #8671f0);
     box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
     color:white;
+}
+.go-row input:hover{
+    background: linear-gradient(145deg,#8671f0, #715fca );
 }
 #nav-drawer {
     display:none; /*1024px以上はハンバーガー非表示*/
@@ -1195,6 +1235,9 @@ input:checked+.check{
         border-radius: 20px;
         background: linear-gradient(145deg, #715fca, #8671f0);
         box-shadow:  10px 10px 20px #6a5abe,-10px -10px 20px #907aff;
+    }
+    .top-go-q2:hover,.top-go-r2:hover,.top-go-p2:hover{
+        background: linear-gradient(145deg,#8671f0, #715fca );
     }
     .p2{
         display:flex;
