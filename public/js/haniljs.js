@@ -16,11 +16,11 @@ document.getElementById("a1").onclick = function() {
     }
     if(document.choice1.a1.value == document.choice1.ans.value){
         document.getElementById( 'result-correct' ).style.display="flex";
-        document.getElementById( 'maru' ).style.display="flex";
+        // document.getElementById( 'maru' ).style.display="flex";
     }
     else{
         document.getElementById( 'result-incorrect' ).style.display="flex";
-        document.getElementById( 'batsu' ).style.display="flex";
+        // document.getElementById( 'batsu' ).style.display="flex";
     }
 }
 

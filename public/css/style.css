@@ -749,9 +749,9 @@ button.btn-login.btn-primary:hover{
     background: linear-gradient(145deg,#8671f0, #715fca );
 }
 /*------------------------answer-main---------------------------*/
-#maru,#batsu{
+/* /* #maru,#batsu{ */
     /* display: hidden; */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* -webkit-animation: cssAnimation 0s ease-in 5s forwards;
     animation: cssAnimation 0s ease-in 5s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -769,7 +769,7 @@ button.btn-login.btn-primary:hover{
         height:0;
         visibility:hidden;
     }
-}
+}  */
 .answer-block{
     display: flex;
     justify-content: center;
