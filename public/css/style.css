@@ -749,6 +749,27 @@ button.btn-login.btn-primary:hover{
     background: linear-gradient(145deg,#8671f0, #715fca );
 }
 /*------------------------answer-main---------------------------*/
+#maru,#batsu{
+    /* display: hidden; */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
 .answer-block{
     display: flex;
     justify-content: center;
@@ -1856,6 +1877,12 @@ input:checked+.check{
     .torf div,.qnum div,.japa div,.kore div{
         margin: 5px;
         font-size: 12px;
+    }
+    .kore div{
+        margin-right: 10px;
+    }
+    .kore div{
+        width: 150px;
     }
     .white-border{
         width: 340px;

@@ -46,6 +46,8 @@
                 
             </header>
             <main>
+                <div id="maru">○</div>
+                <div id="batsu">×</div>
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
