@@ -46,8 +46,8 @@
                 
             </header>
             <main>
-                <!-- <div id="maru">○</div>
-                <div id="batsu">×</div> -->
+                <div id="maru">○</div>
+                <div id="batsu">×</div>
                 <div class="header-count">
                     <ul class="answer-count">
                         <li>回答数</li>
@@ -116,7 +116,7 @@
                                     <div class="combi2">{{$data_q->korean}}</div>
                                 </div>
                             </div>
-                            <form id="correct_myform" method="POST" action="/correct" class="combi-form">
+                            <form id="correct-myform" method="POST" action="/correct" class="combi-form">
                                 @csrf
                                 <input type="submit" value="次の問題へ"/>
                             </form>
@@ -133,7 +133,7 @@
                                     <div class="combi2">{{$data_q->korean}}</div>
                                 </div>
                             </div>
-                            <form id="incorrect_myform" method="POST" action="/incorrect" class="combi-form">
+                            <form id="incorrect-myform" method="POST" action="/incorrect" class="combi-form">
                                 @csrf
                                 <input type="submit" value="次の問題へ"/>
                             </form>
