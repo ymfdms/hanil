@@ -43,7 +43,6 @@
                     　</div>
                     </div>
                 </div>
-                
             </header>
             <main>
                 <div id="maru">○</div>
