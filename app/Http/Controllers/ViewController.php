@@ -92,7 +92,6 @@ class ViewController extends Controller
         $postcount=Post::max('id'); //投稿のidの最大値を取得
         $data1=null; //初期化
         while($data1==null){
-            // $data1 = Post::where('id',mt_rand(1,$postcount))->first();
             $data1 = Post::where('id',mt_rand(1,$postcount))->first();
         }
         $data2=null; //初期化
@@ -119,8 +118,6 @@ class ViewController extends Controller
     }
     
     public function correct(Request $request){ //正解したとき、この関数が動く
-        // $request->session()->forget(['0','1','2','3','4','5','6','7','8','9','10']);
-        // $request->session()->forget('pnum');
         if (Auth::check()){
             $inout="ログアウト";
         }
