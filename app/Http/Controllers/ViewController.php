@@ -24,7 +24,19 @@ class ViewController extends Controller
         $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
         return view('top',compact('answer_count','inout','correct_sum'));
     }
-
+    public function howto()
+    {
+        if (Auth::check()){
+            $inout="ログアウト";
+        }
+        else{
+            $inout="ログイン";
+        }
+        $result2=new Result2;
+        $answer_count=Result2::where('user_id',Auth::id())->sum('answer_count'); //ヘッダー用、回答数
+        $correct_sum=Post::where('user_id',Auth::id())->count(); //ヘッダー用、投稿数
+        return view('howto',compact('answer_count','inout','correct_sum'));
+    }
     public function choice()
     {
         if (Auth::check()){

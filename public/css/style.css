@@ -263,6 +263,11 @@ input:focus{
 .go-p:hover{
     background: linear-gradient(145deg,#8671f0, #715fca );
 }
+/*------------------------howtoメイン---------------------------*/
+.slide-image{
+    width:500px;
+    height:300px;
+}
 /*------------------------choiceメイン---------------------------*/
 .cho-cen{
     display:flex;

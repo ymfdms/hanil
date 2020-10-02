@@ -28,6 +28,7 @@ Route::post('/correct', 'ViewController@correct');
 Route::post('/incorrect', 'ViewController@incorrect');
 Route::get('/goanswer', 'ViewController@goanswer');
 Route::get('/gotop', 'ViewController@gotop');
+Route::get('/howto', 'ViewController@howto');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
